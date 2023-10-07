@@ -1,0 +1,12 @@
+{
+    "require": {
+        "php": ">=7.0.0",
+        "ext-curl": "*",
+        "elasticsearch/elasticsearch": "8.7.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": false
+        }
+    }
+}
