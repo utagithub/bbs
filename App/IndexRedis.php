@@ -402,7 +402,7 @@ $indexRedis = new IndexRedis;
 
 
 //新增帖子
-//$indexRedis->addBBSArticle();
+$indexRedis->addBBSArticle();
 
 //详情
 //$indexRedis->getBBSArticleById();
@@ -414,7 +414,7 @@ $indexRedis = new IndexRedis;
 //$indexRedis->delBBSArticle();
 
 //更新
-$indexRedis->updateBBSArticle();
+//$indexRedis->updateBBSArticle();
 
 
 

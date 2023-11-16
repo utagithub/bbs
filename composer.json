@@ -2,7 +2,8 @@
     "require": {
         "php": ">=7.0.0",
         "ext-curl": "*",
-        "elasticsearch/elasticsearch": "8.7.0"
+        "elasticsearch/elasticsearch": "8.7.0",
+        "geoip2/geoip2": "~2.0"
     },
     "config": {
         "allow-plugins": {
