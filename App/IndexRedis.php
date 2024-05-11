@@ -402,13 +402,13 @@ $indexRedis = new IndexRedis;
 
 
 //新增帖子
-$indexRedis->addBBSArticle();
+//$indexRedis->addBBSArticle();
 
 //详情
 //$indexRedis->getBBSArticleById();
 
 //获取帖子列表
-//$indexRedis->getBBSArticleList();
+$indexRedis->getBBSArticleList();
 
 //删除帖子
 //$indexRedis->delBBSArticle();

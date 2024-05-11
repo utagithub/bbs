@@ -7,8 +7,6 @@ class IndexEs
 
 {
 
-    //用作删除hash数据field
-    const TABLE_FIELDS = ['subject', 'author', 'idate', 'replies', 'body', 'ndate', 'ip'];
 
     /*
      * 释放mysql链接资源

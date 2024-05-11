@@ -36,10 +36,10 @@ class AnswerElasticTools
     private function __construct($config)
     {
 
-        !empty($config['host']) && $this->host = $config['host'];
+        !empty($config['host'])     && $this->host = $config['host'];
         !empty($config['username']) && $this->username = $config['username'];
         !empty($config['password']) && $this->password = $config['password'];
-        !empty($config['port']) && $this->port = $config['port'];
+        !empty($config['port'])     && $this->port = $config['port'];
 
 
         try {
@@ -328,6 +328,7 @@ class AnswerElasticTools
     }
 
     /**
+     * 批处理文档 增删改查
      * @param $index ...索引名称
      * @param $method ...操作方法
      * @param $data
