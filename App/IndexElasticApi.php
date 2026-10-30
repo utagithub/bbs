@@ -458,9 +458,9 @@ class IndexElasticApi
 
 $indexElasticApi = new IndexElasticApi();
 
-$indexElasticApi->sqlQuery();
+//$indexElasticApi->sqlQuery();
 
-//$indexElasticApi->mysqlToEs();
+$indexElasticApi->mysqlToEs();
 
 //$indexElasticApi->bulkDoc();
 

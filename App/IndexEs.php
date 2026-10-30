@@ -88,22 +88,17 @@ class IndexEs
 
     public function getBBSArticleList()
     {
-        $data = file_get_contents('php://input');
-        $data = json_decode($data, true);
+      $data = json_decode(file_get_contents('php://input'), true);
+      $data = is_array($data) ? $data : [];
 
-        //页数
-        $page = !empty($data['page']) ? $data['page'] : 1;
-        //每页数据量
-        $size = !empty($data['size']) ? $data['size'] : 5;
+      $page = max(1, (int)($data['page'] ?? 1));
+      $size = max(1, (int)($data['size'] ?? 5));
 
-        //偏移量-开始
-        $from = ($page - 1) * $size;
-        //偏移量-结束
-        //$end = ($offset + $size) - 1;
-
-        $search = $data['search'];
-        $search['from'] = $from;
-        $search['size'] = $size;
+      $from = ($page - 1) * $size;
+      $search = $data['search'] ?? [];
+      $search = is_array($search) ? $search : [];
+      $search['from'] = $from;
+      $search['size'] = $size;
 
 //        $total = AnswerMysqlTools::getInstance([])-> count();
 //        $list  = AnswerMysqlTools::getInstance([])-> paginate($from,$size,'desc');
@@ -418,7 +413,7 @@ $indexEs->getBBSArticleList();
 //$indexEs->delBBSArticle();
 
 //更新
-$indexEs->updateBBSArticle();
+//$indexEs->updateBBSArticle();
 
 
 
